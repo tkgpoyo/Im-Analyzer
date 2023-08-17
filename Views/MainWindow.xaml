@@ -11,6 +11,6 @@
         <vm:MainWindowViewModel />
     </Window.DataContext>
     <Grid>
-        <ContentControl Content="{Binding ActiveContent, Mode=OneWay}"/>
+        <Frame Name="frame" NavigationUIVisibility="Hidden" Margin="30,30,30,30"/>
     </Grid>
 </Window>

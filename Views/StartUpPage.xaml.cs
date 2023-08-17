@@ -18,11 +18,16 @@ namespace Im_Analyzer.Views
     /// <summary>
     /// StartUpPage.xaml の相互作用ロジック
     /// </summary>
-    public partial class StartUpPage : UserControl
+    public partial class StartUpPage : Page
     {
         public StartUpPage()
         {
             InitializeComponent();
+        }
+
+        private void ToSelect(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SelectPage());
         }
     }
 }

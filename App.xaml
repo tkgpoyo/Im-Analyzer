@@ -6,10 +6,6 @@
              xmlns:view="clr-namespace:Im_Analyzer.Views"
              StartupUri="Views\MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary>
-            <DataTemplate DataType="{x:Type vm:StartUpPageViewModel}">
-                <view:StartUpPage />
-            </DataTemplate>
-        </ResourceDictionary>
+        <ResourceDictionary Source="/Common/ButtonView.xaml"/>
     </Application.Resources>
 </Application>

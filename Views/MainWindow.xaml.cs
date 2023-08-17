@@ -23,6 +23,9 @@ namespace Im_Analyzer.Views
         public MainWindow()
         {
             InitializeComponent();
+
+            Uri uri = new Uri("/Views/StartUpPage.xaml", UriKind.Relative);
+            frame.Source = uri;
         }
 
     }

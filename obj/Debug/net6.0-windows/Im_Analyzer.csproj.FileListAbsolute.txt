@@ -22,4 +22,7 @@ C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Im_Analyzer.csproj.
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\StartUpPage.g.cs
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\StartUpPage.baml
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\SelectPage.g.cs
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\SelectPage.baml
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Common\ButtonView.baml
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\App.baml
