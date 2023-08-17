@@ -19,3 +19,7 @@ C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\ref\Im_Analyzer.dll
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\MainWindow.baml
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Im_Analyzer.csproj.ResolveComReference.cache
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\StartUpPage.g.cs
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\StartUpPage.baml
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\App.baml

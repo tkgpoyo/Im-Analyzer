@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\yktso\WPF_Apps\Im_Analyzer\App.xaml
-1-1644662438
+2-1646323258
 
-7-867735326
+10255930935
 194726069201
-Views\MainWindow.xaml;
+Views\MainWindow.xaml;Views\StartUpPage.xaml;
 
-False
+True
 
