@@ -26,3 +26,15 @@ C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\SelectPage.g.
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\SelectPage.baml
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Common\ButtonView.baml
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\App.baml
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Im_Analyzer.csproj.AssemblyReference.cache
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Microsoft.Win32.SystemEvents.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\OpenCvSharp.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\OpenCvSharp.Extensions.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\System.Drawing.Common.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Im_Analyzer.csproj.CopyComplete
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\runtimes\win-x64\native\OpenCvSharpExtern.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\runtimes\win-x64\native\opencv_videoio_ffmpeg480_64.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\runtimes\win-x86\native\OpenCvSharpExtern.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\runtimes\win-x86\native\opencv_videoio_ffmpeg480.dll

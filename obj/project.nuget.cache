@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "DXC12E4db3qWzMtiYal/738+HO7W2Jz9FcKB2+DgrfoaJeUBOFWYzrfRizPdXZT3RnZr0qSInHEH/mdcy5D0Dg==",
+  "dgSpecHash": "WixlmtxEgo24eoqRiEiojX22YSPGe0WuSjMPVio8WKIEX87qj42MSR8TwrUMidYQspvD1IOLA6JuQj5cQWzFFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\yktso\\WPF_Apps\\Im_Analyzer\\Im_Analyzer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\yktso\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\opencvsharp4\\4.8.0.20230708\\opencvsharp4.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\opencvsharp4.extensions\\4.8.0.20230708\\opencvsharp4.extensions.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\opencvsharp4.runtime.win\\4.8.0.20230708\\opencvsharp4.runtime.win.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\opencvsharp4.windows\\4.8.0.20230708\\opencvsharp4.windows.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
