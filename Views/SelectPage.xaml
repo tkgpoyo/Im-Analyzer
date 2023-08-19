@@ -23,7 +23,9 @@
         </Grid.RowDefinitions>
         <Grid Grid.RowSpan="3" Grid.ColumnSpan="2"/>
 
-        <Image Source="{Binding Bmp}" Grid.Row="1"/>
+        <Border BorderThickness="1" BorderBrush="Blue" Margin="10,10,10,10" Grid.Row="1">
+            <Image Source="{Binding Bmp}"/>
+        </Border>
 
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
@@ -31,7 +33,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button Content="撮影" Command="{Binding SnapshotCommand}"/>
+            <Button Content="撮影" Command="{Binding SnapshotCommand}" />
             <Button Content="画像選択" Grid.Row="1"/>
             <Button Content="戻る" Grid.Row="2"/>
         </Grid>

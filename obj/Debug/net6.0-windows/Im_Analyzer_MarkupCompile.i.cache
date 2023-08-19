@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\
+\\wsl.localhost\Ubuntu\home\tkgpoyo\WPF_Apps\Im-Analyzer\obj\Debug\net6.0-windows\
 Im_Analyzer
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\yktso\WPF_Apps\Im_Analyzer\App.xaml
+\\wsl.localhost\Ubuntu\home\tkgpoyo\WPF_Apps\Im-Analyzer\App.xaml
 41505075112
 
 13339008198
 19727345885
 Common\ButtonView.xaml;Views\MainWindow.xaml;Views\SelectPage.xaml;Views\StartUpPage.xaml;
 
-False
+True
 

@@ -13,15 +13,22 @@ namespace Im_Analyzer.Models
 {
     class Camera
     {
-        VideoCapture capture;
+        public VideoCapture capture;
         Mat frame;
 
-        public Camera()
+        public Camera(ref int status)
         {
-            capture = new VideoCapture(0);
-            if (!capture.IsOpened())
-                throw new Exception("capture initialization failed");
-            frame = new Mat();
+            try
+            {
+                capture = new VideoCapture(0);
+                if (!capture.IsOpened())
+                    throw new Exception("capture initialization failed");
+                frame = new Mat();
+
+            } catch (TypeInitializationException e)
+            {
+                status = -1;
+            }
         }
 
         public BitmapSource Capture()
