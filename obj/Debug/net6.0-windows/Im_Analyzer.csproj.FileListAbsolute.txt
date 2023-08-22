@@ -86,3 +86,7 @@ C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Unity.Container.dll
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\FunctionPage.baml
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\FunctionPage.g.cs
 C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\OpenCvSharp.WpfExtensions.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\RetouchMenu.baml
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\RetouchMenu.g.cs
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\TrimmingPage.baml
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\TrimmingPage.g.cs

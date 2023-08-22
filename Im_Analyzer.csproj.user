@@ -10,7 +10,13 @@
     <Compile Update="Views\FunctionPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\RetouchMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\StartUpPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TrimmingPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -24,7 +30,13 @@
     <Page Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\RetouchMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\StartUpPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TrimmingPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

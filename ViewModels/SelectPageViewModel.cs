@@ -97,7 +97,7 @@ namespace Im_Analyzer.ViewModels
             isTask = false;
 
             var dialog = new OpenFileDialog();
-            dialog.Filter = "画像ファイル(*.jpg,*.png)|*.jpg;*.png";
+            dialog.Filter = "画像ファイル(*.jpg,*.png,*.bmp)|*.jpg;*.png;*.bmp";
 
             var result = dialog.ShowDialog();
 

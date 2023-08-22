@@ -19,6 +19,8 @@ namespace Im_Analyzer
             containerRegistry.RegisterForNavigation<Views.StartUpPage>();
             containerRegistry.RegisterForNavigation<Views.SelectPage>();
             containerRegistry.RegisterForNavigation<Views.FunctionPage>();
+            containerRegistry.RegisterForNavigation<Views.RetouchMenu>();
+            containerRegistry.RegisterForNavigation<Views.TrimmingPage>();
         }
     }
 }
