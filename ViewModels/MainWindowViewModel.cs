@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Prism.Mvvm;
+using Prism.Regions;
+using Im_Analyzer.Views;
 
 namespace Im_Analyzer.ViewModels
 {
-    class MainWindowViewModel : ViewModelBase
+    public class MainWindowViewModel : BindableBase
     {
-        private ViewModelBase _activeContent;
-        public ViewModelBase ActiveContent
+        private IRegionManager _regionManager;
+
+        private string _title = "Im_Analyzer";
+        public string Title
         {
-            get => _activeContent;
-            set
-            {
-                _activeContent = value;
-                RaisePropertyChanged("ActiveContent");
-            }
+            get { return _title; }
+            set { SetProperty(ref _title, value); }
         }
-        public MainWindowViewModel()
+
+        public MainWindowViewModel(IRegionManager regionManager)
         {
-            ActiveContent = new StartUpPageViewModel();
+            _regionManager = regionManager;
+            _regionManager.RegisterViewWithRegion("ContentRegion", nameof(StartUpPage));
         }
     }
 }
