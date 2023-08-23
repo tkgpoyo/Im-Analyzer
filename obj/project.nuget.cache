@@ -1,9 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "TDf7cE4WmRGzM7jQ3g/OaaXcAcRuRg09yKrDMsPbrK1G3I2a30ZM+aJU9jyte8eild3/zYPK5GhykzhJXD8D9g==",
+  "dgSpecHash": "5u8CfeaJvC47WPEQOu8vk3FdIsmO4T6DNPS+47M3cp1KoEjq8Ay64nI/4HLwXuoKj6s0gdmG1b5nwy5+MZr4dA==",
   "success": true,
   "projectFilePath": "C:\\Users\\yktso\\WPF_Apps\\Im_Analyzer\\Im_Analyzer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\yktso\\.nuget\\packages\\livetcask\\4.0.2\\livetcask.4.0.2.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\livetcask.behaviors\\4.0.2\\livetcask.behaviors.4.0.2.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\livetcask.collections\\4.0.2\\livetcask.collections.4.0.2.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\livetcask.converters\\4.0.2\\livetcask.converters.4.0.2.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\livetcask.core\\4.0.2\\livetcask.core.4.0.2.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\livetcask.eventlisteners\\4.0.2\\livetcask.eventlisteners.4.0.2.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\livetcask.messaging\\4.0.2\\livetcask.messaging.4.0.2.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\livetcask.mvvm\\4.0.2\\livetcask.mvvm.4.0.2.nupkg.sha512",
     "C:\\Users\\yktso\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\yktso\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
     "C:\\Users\\yktso\\.nuget\\packages\\opencvsharp4\\4.8.0.20230708\\opencvsharp4.4.8.0.20230708.nupkg.sha512",

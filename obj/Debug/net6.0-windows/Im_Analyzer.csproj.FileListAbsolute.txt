@@ -90,3 +90,12 @@ C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\RetouchMenu.b
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\RetouchMenu.g.cs
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\TrimmingPage.baml
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\TrimmingPage.g.cs
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.Behaviors.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.Collections.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.Converters.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.Core.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.EventListeners.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.Messaging.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.Mvvm.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs

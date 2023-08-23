@@ -27,11 +27,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="LivetCask" Version="4.0.2" />
     <PackageReference Include="OpenCvSharp4" Version="4.8.0.20230708" />
     <PackageReference Include="OpenCvSharp4.Extensions" Version="4.8.0.20230708" />
     <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.8.0.20230708" />
     <PackageReference Include="OpenCvSharp4.Windows" Version="4.8.0.20230708" />
     <PackageReference Include="OpenCvSharp4.WpfExtensions" Version="4.8.0.20230708" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
 

@@ -2,6 +2,125 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "LivetCask/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "LivetCask.Behaviors": "4.0.2",
+          "LivetCask.Collections": "4.0.2",
+          "LivetCask.Converters": "4.0.2",
+          "LivetCask.EventListeners": "4.0.2",
+          "LivetCask.Messaging": "4.0.2",
+          "LivetCask.Mvvm": "4.0.2"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Livet.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Livet.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "LivetCask.Behaviors/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "LivetCask.Core": "4.0.2",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.31"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Livet.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Livet.Behaviors.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "LivetCask.Collections/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "LivetCask.EventListeners": "4.0.2"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Livet.Collections.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Livet.Collections.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "LivetCask.Converters/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.31"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Livet.Converters.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Livet.Converters.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "LivetCask.Core/4.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Livet.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Livet.Core.dll": {}
+        }
+      },
+      "LivetCask.EventListeners/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "LivetCask.Core": "4.0.2"
+        },
+        "compile": {
+          "lib/net6.0/Livet.EventListeners.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Livet.EventListeners.dll": {}
+        }
+      },
+      "LivetCask.Messaging/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "LivetCask.Core": "4.0.2",
+          "LivetCask.EventListeners": "4.0.2",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.31"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Livet.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Livet.Messaging.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "LivetCask.Mvvm/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "LivetCask.Messaging": "4.0.2"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Livet.Mvvm.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Livet.Mvvm.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "Microsoft.Win32.SystemEvents/7.0.0": {
         "type": "package",
         "compile": {
@@ -270,6 +389,126 @@
     }
   },
   "libraries": {
+    "LivetCask/4.0.2": {
+      "sha512": "0Vgpw9Gv0mS8vEzmbDV0cFrPAObjknz7MxbXlmS9x7JENokm43kE5lzLLsHC1zraDnfKxuVJlqjfJk+OI2R6Rg==",
+      "type": "package",
+      "path": "livetcask/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Livet.dll",
+        "lib/net6.0-windows7.0/Livet.dll",
+        "lib/netcoreapp3.1/Livet.dll",
+        "license-en.txt",
+        "livetcask.4.0.2.nupkg.sha512",
+        "livetcask.nuspec"
+      ]
+    },
+    "LivetCask.Behaviors/4.0.2": {
+      "sha512": "6KNqWF5hdIVKF+UU2LAjja5PIigQSISO+g7Ixv37GjM16bIQF8Sa9PurYaeFQOhng2LUi7RQlGVYpCTfEc+dXg==",
+      "type": "package",
+      "path": "livetcask.behaviors/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Livet.Behaviors.dll",
+        "lib/net6.0-windows7.0/Livet.Behaviors.dll",
+        "lib/netcoreapp3.1/Livet.Behaviors.dll",
+        "license-en.txt",
+        "livetcask.behaviors.4.0.2.nupkg.sha512",
+        "livetcask.behaviors.nuspec"
+      ]
+    },
+    "LivetCask.Collections/4.0.2": {
+      "sha512": "svZwO3diHrYwlC+cyjTI7Y6FTKdgkQc8qemLpdkPmlTwqMCjXaXzOUCG4OZk+vCBh0qpM7SuLKITNK4/0XKdug==",
+      "type": "package",
+      "path": "livetcask.collections/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Livet.Collections.dll",
+        "lib/net6.0-windows7.0/Livet.Collections.dll",
+        "lib/netcoreapp3.1/Livet.Collections.dll",
+        "license-en.txt",
+        "livetcask.collections.4.0.2.nupkg.sha512",
+        "livetcask.collections.nuspec"
+      ]
+    },
+    "LivetCask.Converters/4.0.2": {
+      "sha512": "6lW9dacE9wvWmf6Dhv7ynbFXcH4hhf3tJKXo6Uei3wh6w3TF2gJGMa9XFkxc/rHH6NCb7Y9igpgq0jMy9r9jjQ==",
+      "type": "package",
+      "path": "livetcask.converters/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Livet.Converters.dll",
+        "lib/net6.0-windows7.0/Livet.Converters.dll",
+        "lib/netcoreapp3.1/Livet.Converters.dll",
+        "license-en.txt",
+        "livetcask.converters.4.0.2.nupkg.sha512",
+        "livetcask.converters.nuspec"
+      ]
+    },
+    "LivetCask.Core/4.0.2": {
+      "sha512": "/Cp5areP4R0rSxBQNCIUhrvRrT9aOFl90oW/j/t+tiXvByhjLkweVzfmrjNKQD0jRJCaxipZkK+3twVFCtKXwg==",
+      "type": "package",
+      "path": "livetcask.core/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Livet.Core.dll",
+        "lib/net6.0/Livet.Core.dll",
+        "lib/netstandard2.0/Livet.Core.dll",
+        "license-en.txt",
+        "livetcask.core.4.0.2.nupkg.sha512",
+        "livetcask.core.nuspec"
+      ]
+    },
+    "LivetCask.EventListeners/4.0.2": {
+      "sha512": "bRcfcgP6Ncc2In2Jla+V5YKZ+M6fRyJwx7aMKO9MShD1r9ZsYz7UY3x7XrQoRav8Q7zIENupJJo0r7xxdEYBOQ==",
+      "type": "package",
+      "path": "livetcask.eventlisteners/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Livet.EventListeners.dll",
+        "lib/net6.0/Livet.EventListeners.dll",
+        "lib/netstandard2.0/Livet.EventListeners.dll",
+        "license-en.txt",
+        "livetcask.eventlisteners.4.0.2.nupkg.sha512",
+        "livetcask.eventlisteners.nuspec"
+      ]
+    },
+    "LivetCask.Messaging/4.0.2": {
+      "sha512": "zyFeUvDjALJQegYqg0MV9t969uzcp3hhtsNitRttfWPdpPUZBF0GSgMG/uy+bT1olmBOjCB6/2+MwG+5pB0IYA==",
+      "type": "package",
+      "path": "livetcask.messaging/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Livet.Messaging.dll",
+        "lib/net6.0-windows7.0/Livet.Messaging.dll",
+        "lib/netcoreapp3.1/Livet.Messaging.dll",
+        "license-en.txt",
+        "livetcask.messaging.4.0.2.nupkg.sha512",
+        "livetcask.messaging.nuspec"
+      ]
+    },
+    "LivetCask.Mvvm/4.0.2": {
+      "sha512": "lrqCgHGRC6YHmhivfF+g23c8Q4j2mgCgBkfNuhJ45SqlEdgjIzeUfMLC9BwHsdRnN6Iso6ezAWgL02OsQcZrWQ==",
+      "type": "package",
+      "path": "livetcask.mvvm/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Livet.Mvvm.dll",
+        "lib/net6.0-windows7.0/Livet.Mvvm.dll",
+        "lib/netcoreapp3.1/Livet.Mvvm.dll",
+        "license-en.txt",
+        "livetcask.mvvm.4.0.2.nupkg.sha512",
+        "livetcask.mvvm.nuspec"
+      ]
+    },
     "Microsoft.Win32.SystemEvents/7.0.0": {
       "sha512": "2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
       "type": "package",
@@ -672,11 +911,13 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "LivetCask >= 4.0.2",
       "OpenCvSharp4 >= 4.8.0.20230708",
       "OpenCvSharp4.Extensions >= 4.8.0.20230708",
       "OpenCvSharp4.Windows >= 4.8.0.20230708",
       "OpenCvSharp4.WpfExtensions >= 4.8.0.20230708",
       "OpenCvSharp4.runtime.win >= 4.8.0.20230708",
+      "Prism.Core >= 8.1.97",
       "Prism.Unity >= 8.1.97"
     ]
   },
@@ -725,6 +966,10 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "LivetCask": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          },
           "OpenCvSharp4": {
             "target": "Package",
             "version": "[4.8.0.20230708, )"
@@ -744,6 +989,10 @@
           "OpenCvSharp4.runtime.win": {
             "target": "Package",
             "version": "[4.8.0.20230708, )"
+          },
+          "Prism.Core": {
+            "target": "Package",
+            "version": "[8.1.97, )"
           },
           "Prism.Unity": {
             "target": "Package",
