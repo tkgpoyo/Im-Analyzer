@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <Grid Grid.RowSpan="3" Grid.ColumnSpan="2"/>
 
-        <Border BorderBrush="Aqua" BorderThickness="0.5" Margin="10,10,10,10" Grid.Row="1">
+        <Border BorderBrush="Aqua" BorderThickness="0.5" Margin="10,10,10,10" Background="AliceBlue" Grid.Row="1">
             <Image Source="{Binding Img}" />
         </Border>
 

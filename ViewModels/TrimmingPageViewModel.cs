@@ -11,15 +11,29 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 
+using Im_Analyzer.Views;
+using OpenCvSharp.Extensions;
+using System.Drawing.Imaging;
+using System.Windows.Media;
+using Microsoft.Win32;
+using Prism.Services.Dialogs;
+using System.Drawing;
+
 namespace Im_Analyzer.ViewModels
 {
 	public class TrimmingPageViewModel : BindableBase, INavigationAware
 	{
+		private IRegionManager _regionManager;
+		
 		private double _left;
 		public double Left
 		{
 			get { return _left; }
-			set { SetProperty(ref _left, value); }
+			set
+			{
+				double d = Math.Round((double)value, MidpointRounding.AwayFromZero);
+				SetProperty(ref _left, value);
+			}
 		}
 
 		private double _right;
@@ -28,7 +42,8 @@ namespace Im_Analyzer.ViewModels
 			get { return _right; }
 			set
 			{
-				SetProperty(ref _right, value);
+				double d = Math.Round((double)value, MidpointRounding.AwayFromZero);
+				SetProperty(ref _right, d);
 				Width = Math.Abs(Right - Left);
 			}
 		}
@@ -37,7 +52,11 @@ namespace Im_Analyzer.ViewModels
 		public double Top
 		{
 			get { return _top; }
-			set { SetProperty(ref _top, value); }
+			set
+			{
+				double d = Math.Round((double)value, MidpointRounding.AwayFromZero);
+				SetProperty(ref _top, d);
+			}
 		}
 
 		private double _bottom;
@@ -46,7 +65,8 @@ namespace Im_Analyzer.ViewModels
 			get { return _bottom; }
 			set
 			{
-				SetProperty(ref _bottom, value);
+				double d = Math.Round((double)value, MidpointRounding.AwayFromZero);
+				SetProperty(ref _bottom, d);
 				Height = Math.Abs(Bottom - Top);
 			}
 		}
@@ -80,10 +100,25 @@ namespace Im_Analyzer.ViewModels
 		private DelegateCommand _endPointingCommand;
 		public DelegateCommand EndPointingCommand { get; private set; }
 
-		public TrimmingPageViewModel()
+		private DelegateCommand<object> _mouseOutOfCanvasCommand;
+		public DelegateCommand<object> MouseOutOfCanvasCommand { get; private set; }
+
+		private DelegateCommand<object[]> _trimmingCommand;
+		public DelegateCommand<object[]> TrimmingCommand { get; private set; }
+
+		private DelegateCommand _backPageCommand;
+		public DelegateCommand BackPageCommand { get; private set; }
+
+		public TrimmingPageViewModel(IRegionManager regionManager)
 		{
+			_regionManager = regionManager;
+			
 			StartPointingCommand = new DelegateCommand<object>(StartPointing);
 			EndPointingCommand = new DelegateCommand(EndPointing);
+			MouseOutOfCanvasCommand = new DelegateCommand<object>(MouseOutOfCanvas);
+
+			TrimmingCommand = new DelegateCommand<object[]>(Trimming);
+			BackPageCommand = new DelegateCommand(BackPage);
 		}
 
 		private async void StartPointing(object param)
@@ -121,9 +156,6 @@ namespace Im_Analyzer.ViewModels
 					Bottom = pos.Y;
 				}
 
-				Width = Math.Abs(pos.X - init_pos.X);
-				Height = Math.Abs(pos.Y - init_pos.Y);
-
 				await Task.Delay(30);
 			}
 		}
@@ -131,6 +163,66 @@ namespace Im_Analyzer.ViewModels
 		private void EndPointing()
 		{
 			isDrag = false;
+		}
+
+		private async void MouseOutOfCanvas(object canvas)
+		{
+            while (isDrag)
+            {
+				var c = (System.Windows.Controls.Canvas)canvas;
+				double[] bound = new double[4]
+				{
+					0,				// upper bound
+					c.ActualHeight, // lower bound
+					0,				// left  bound
+					c.ActualWidth,  // right bound
+				};
+
+				if (Top < bound[0])
+					Top = bound[0];
+				if (Bottom > bound[1])
+					Bottom = bound[1];
+				if (Left < bound[2])
+					Left = bound[2];
+				if (Right > bound[3])
+					Right = bound[3];
+
+				await Task.Delay(20);
+			}
+
+		}
+
+		private void Trimming(object[] objects)
+		{
+			var c = (System.Windows.Controls.Canvas)objects[0];
+			var i = (System.Windows.Controls.Image)objects[1];
+
+			double horizontal_gap = (c.ActualWidth - i.ActualWidth) / 2;
+			double vertical_gap = (c.ActualHeight - i.ActualHeight) / 2;
+
+			int l = (int)(Img.PixelWidth * ((Left - horizontal_gap) / i.ActualWidth));
+			int t = (int)(Img.PixelHeight * ((Top - vertical_gap) / i.ActualHeight));
+			int w = (int)(Img.PixelWidth * (Width / i.ActualWidth));
+			int h = (int)(Img.PixelHeight * (Height / i.ActualHeight));
+			
+			try
+			{
+                Img = new CroppedBitmap(Img, new Int32Rect(l, t, w, h));
+
+				var param = new NavigationParameters();
+				param.Add("Image", BitmapSourceConverter.ToMat(Img));
+				_regionManager.RequestNavigate("ContentRegion", nameof(RetouchMenu), param);
+            }
+			catch (System.ArgumentException e)
+			{
+
+				MessageBox.Show("範囲外の数値が渡されました。");
+			}
+        }
+
+        private void BackPage()
+		{
+			_regionManager.RequestNavigate("ContentRegion", nameof(RetouchMenu));
 		}
 		
 		public bool IsNavigationTarget(NavigationContext navigationContext)
@@ -147,6 +239,11 @@ namespace Im_Analyzer.ViewModels
 		{
 			var sent_img = navigationContext.Parameters["Image"] as Mat;
 			Img = BitmapSourceConverter.ToBitmapSource(sent_img);
+
+			Left = 0;
+			Right = 0;
+			Top = 0;
+			Bottom = 0;
 		}
 	}
 }
