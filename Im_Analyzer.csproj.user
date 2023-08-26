@@ -7,10 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AnalyzePage.xaml.cs">
+    <Compile Update="Views\AnalyzeMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\FunctionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LabelingMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\RetouchMenu.xaml.cs">
@@ -27,10 +30,13 @@
     <Page Update="Common\ButtonView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\AnalyzePage.xaml">
+    <Page Update="Views\AnalyzeMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\FunctionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LabelingMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">

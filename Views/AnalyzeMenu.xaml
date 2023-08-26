@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Im_Analyzer.Views.AnalyzeMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:prism="http://prismlibrary.com/"
+			 prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+
+        <Border BorderBrush="Aqua" BorderThickness="0.5" Margin="10,10,10,10" Background="AliceBlue" Grid.Row="1">
+            <Image Source="{Binding Img}" />
+        </Border>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Content="ラベリング" Command="{Binding NavigateCommand}" CommandParameter="LabelingMenu"/>
+        </Grid>
+
+    </Grid>
+</UserControl>

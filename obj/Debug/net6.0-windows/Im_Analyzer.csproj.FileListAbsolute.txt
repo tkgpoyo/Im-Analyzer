@@ -99,3 +99,7 @@ C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.EventListener
 C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.Messaging.dll
 C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\Livet.Mvvm.dll
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\AnalyzeMenu.baml
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\AnalyzeMenu.g.cs
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\LabelingMenu.baml
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\LabelingMenu.g.cs
