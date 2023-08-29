@@ -27,6 +27,7 @@
             </Grid.RowDefinitions>
 
             <Button Content="ラベリング" Command="{Binding NavigateCommand}" CommandParameter="LabelingMenu"/>
+            <Button Content="色検出" Command="{Binding NavigateCommand}" CommandParameter="DetectColorMenu" Grid.Row="1"/>
         </Grid>
 
     </Grid>

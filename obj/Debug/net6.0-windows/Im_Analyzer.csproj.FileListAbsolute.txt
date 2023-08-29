@@ -103,3 +103,8 @@ C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\AnalyzeMenu.b
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\AnalyzeMenu.g.cs
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\LabelingMenu.baml
 C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\LabelingMenu.g.cs
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\DetectColorMenu.baml
+C:\Users\yktso\WPF_Apps\Im_Analyzer\obj\Debug\net6.0-windows\Views\DetectColorMenu.g.cs
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\OxyPlot.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\OxyPlot.Wpf.dll
+C:\Users\yktso\WPF_Apps\Im_Analyzer\bin\Debug\net6.0-windows\OxyPlot.Wpf.Shared.dll

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\yktso\WPF_Apps\Im_Analyzer\App.xaml
-91920281670
+10-1233383218
 
-22835731268
-212519962767
-Common\ButtonView.xaml;Views\AnalyzeMenu.xaml;Views\FunctionPage.xaml;Views\LabelingMenu.xaml;Views\MainWindow.xaml;Views\RetouchMenu.xaml;Views\SelectPage.xaml;Views\StartUpPage.xaml;Views\TrimmingPage.xaml;
+25998124122
+2151260053452
+Common\ButtonView.xaml;Views\AnalyzeMenu.xaml;Views\DetectColorMenu.xaml;Views\FunctionPage.xaml;Views\LabelingMenu.xaml;Views\MainWindow.xaml;Views\RetouchMenu.xaml;Views\SelectPage.xaml;Views\StartUpPage.xaml;Views\TrimmingPage.xaml;
 
 False
 

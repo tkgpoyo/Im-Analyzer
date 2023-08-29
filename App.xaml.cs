@@ -23,6 +23,7 @@ namespace Im_Analyzer
             containerRegistry.RegisterForNavigation<Views.TrimmingPage>();
             containerRegistry.RegisterForNavigation<Views.AnalyzeMenu>();
             containerRegistry.RegisterForNavigation<Views.LabelingMenu>();
+            containerRegistry.RegisterForNavigation<Views.DetectColorMenu>();
         }
     }
 }

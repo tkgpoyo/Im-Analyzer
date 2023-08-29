@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5u8CfeaJvC47WPEQOu8vk3FdIsmO4T6DNPS+47M3cp1KoEjq8Ay64nI/4HLwXuoKj6s0gdmG1b5nwy5+MZr4dA==",
+  "dgSpecHash": "XYXcbxniojeodAKMSe5jkLZNYuqfUHEgqNwEVDds9ZPjTi9sPK5ecnwRxKjySiokyR4z34FFKFV2UuQh0Yb4WA==",
   "success": true,
   "projectFilePath": "C:\\Users\\yktso\\WPF_Apps\\Im_Analyzer\\Im_Analyzer.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,9 @@
     "C:\\Users\\yktso\\.nuget\\packages\\opencvsharp4.runtime.win\\4.8.0.20230708\\opencvsharp4.runtime.win.4.8.0.20230708.nupkg.sha512",
     "C:\\Users\\yktso\\.nuget\\packages\\opencvsharp4.windows\\4.8.0.20230708\\opencvsharp4.windows.4.8.0.20230708.nupkg.sha512",
     "C:\\Users\\yktso\\.nuget\\packages\\opencvsharp4.wpfextensions\\4.8.0.20230708\\opencvsharp4.wpfextensions.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\oxyplot.core\\2.1.2\\oxyplot.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\oxyplot.wpf\\2.1.2\\oxyplot.wpf.2.1.2.nupkg.sha512",
+    "C:\\Users\\yktso\\.nuget\\packages\\oxyplot.wpf.shared\\2.1.2\\oxyplot.wpf.shared.2.1.2.nupkg.sha512",
     "C:\\Users\\yktso\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
     "C:\\Users\\yktso\\.nuget\\packages\\prism.unity\\8.1.97\\prism.unity.8.1.97.nupkg.sha512",
     "C:\\Users\\yktso\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512",
