@@ -17,6 +17,6 @@
         <Label Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="64">Im__Analyzer</Label>
 
         <Button Grid.Row="1" Margin="100,10,10,50" FontSize="18" Command="{Binding NavigateCommand}" CommandParameter="SelectPage" Content="開始"/>
-        <Button Grid.Column="1" Grid.Row="1" Margin="10,10,100,50" FontSize="18" Content="使い方"/>
+        <Button Grid.Column="1" Grid.Row="1" Margin="10,10,100,50" FontSize="18" Content="終了" Command="{Binding CloseCommand}"/>
     </Grid>
 </UserControl>

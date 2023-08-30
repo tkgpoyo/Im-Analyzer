@@ -15,9 +15,20 @@
         </Grid.RowDefinitions>
         <Grid Grid.RowSpan="3" Grid.ColumnSpan="2"/>
 
-        <Border BorderBrush="Aqua" BorderThickness="0.5" Margin="10,10,10,10" Background="AliceBlue" Grid.Row="1">
-            <Image Source="{Binding Img}" />
-        </Border>
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border BorderBrush="Aqua" BorderThickness="0.5" Margin="10" Background="AliceBlue">
+                <Image Source="{Binding Original_Img}" />
+            </Border>
+
+            <Border BorderBrush="Aqua" BorderThickness="0.5" Margin="10" Background="AliceBlue" Grid.Row="1">
+                <Image Source="{Binding Img}" />
+            </Border>
+        </Grid>
 
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>

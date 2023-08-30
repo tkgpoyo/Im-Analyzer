@@ -21,20 +21,19 @@ namespace Im_Analyzer.ViewModels
 			set { SetProperty(ref _img, value); }
 		}
 
-		private DelegateCommand<string> _showMenuCommand;
-		public DelegateCommand<string> ShowMenuCommand { get; private set; }
+		public DelegateCommand<string> NavigateCommand { get; private set; }
 
 		public FunctionPageViewModel(IRegionManager regionManager)
 		{
 			_regionManager = regionManager;
-			ShowMenuCommand = new DelegateCommand<string>(ShowMenu);
+			NavigateCommand = new DelegateCommand<string>(Navigate);
 		}
 
-		private void ShowMenu(string navigatePath)
+		private void Navigate(string navigatePath)
 		{
             var param = new NavigationParameters();
             param.Add("Image", BitmapSourceConverter.ToMat(Img));
-            _regionManager.RequestNavigate("ContentRegion", navigatePath, param);
+			Models.Navigation.Navigation.NavigateToPath(_regionManager, "ContentRegion", navigatePath, param);
 		}
 
 		public bool IsNavigationTarget(NavigationContext navigationContext)

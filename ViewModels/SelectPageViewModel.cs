@@ -69,7 +69,7 @@ namespace Im_Analyzer.ViewModels
                     var param = new NavigationParameters();
                     param.Add("Image", BitmapSourceConverter.ToMat(Bmp));
                     // 画面遷移の処理 
-                    _regionManager.RequestNavigate("ContentRegion", nameof(FunctionPage), param);
+                    Models.Navigation.Navigation.NavigateToPath(_regionManager, "ContentRegion", nameof(FunctionPage), param);
                     break;
                 case MessageBoxResult.No:
                     // 撮り直し 
@@ -110,7 +110,7 @@ namespace Im_Analyzer.ViewModels
                     var param = new NavigationParameters();
                     param.Add("Image", new Mat(filepath));
                     // 画面遷移
-                    _regionManager.RequestNavigate("ContentRegion", nameof(FunctionPage), param);
+                    Models.Navigation.Navigation.NavigateToPath(_regionManager, "ContentRegion", nameof(FunctionPage), param);
                     break;
                 case false:
                     isTask = true;
@@ -123,7 +123,7 @@ namespace Im_Analyzer.ViewModels
         // StartUpPageに戻るボタン
         private void BackToStartUp()
         {
-            _regionManager.RequestNavigate("ContentRegion", nameof(StartUpPage));
+            Models.Navigation.Navigation.NavigateToPath(_regionManager, "ContentRegion", nameof(StartUpPage));
         }
 
 

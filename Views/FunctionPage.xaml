@@ -23,9 +23,11 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button Content="加工" Command="{Binding ShowMenuCommand}" CommandParameter="RetouchMenu" />
-            <Button Content="分析" Grid.Row="1" Command="{Binding ShowMenuCommand}" CommandParameter="AnalyzeMenu" />
+            <Button Content="加工" Command="{Binding NavigateCommand}" CommandParameter="RetouchMenu" />
+            <Button Content="分析" Grid.Row="1" Command="{Binding NavigateCommand}" CommandParameter="AnalyzeMenu" />
+            <Button Content="戻る" Grid.Row="2" Command="{Binding NavigateCommand}" CommandParameter="SelectPage"/>
         </Grid>
     </Grid>
 </UserControl>

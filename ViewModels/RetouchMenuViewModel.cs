@@ -10,6 +10,9 @@ using OpenCvSharp.WpfExtensions;
 using System.Windows;
 using System.Threading.Tasks;
 using System.Windows.Navigation;
+using Microsoft.Win32;
+using System.Drawing;
+using OpenCvSharp.Extensions;
 
 namespace Im_Analyzer.ViewModels
 {
@@ -26,16 +29,15 @@ namespace Im_Analyzer.ViewModels
 
 		private BitmapSource original_bmp;
 
-		private DelegateCommand<string> _navigateCommand;
 		public DelegateCommand<string> NavigateCommand { get; private set; }
-
-		private DelegateCommand _resetCommand;
+		public DelegateCommand SaveCommand { get; private set; }
 		public DelegateCommand ResetCommand { get; private set; }
 
 		public RetouchMenuViewModel(IRegionManager regionManager)
 		{
 			_regionManager = regionManager;
 			NavigateCommand = new DelegateCommand<string>(Navigate);
+			SaveCommand = new DelegateCommand(Save);
 			ResetCommand = new DelegateCommand(Reset);
 		}
 
@@ -43,8 +45,39 @@ namespace Im_Analyzer.ViewModels
 		{
 			var param = new NavigationParameters();
 			param.Add("Image", BitmapSourceConverter.ToMat(Img));
-			//_regionManager.RequestNavigate("ContentRegion", navigatePath, param);
 			Models.Navigation.Navigation.NavigateToPath(_regionManager, "ContentRegion", navigatePath, param);
+		}
+
+		private void Save()
+		{
+			SaveFileDialog saveFileDialog = new SaveFileDialog();
+			saveFileDialog.Filter = "Bitmapファイル|*.bmp|Pngファイル|*.png|JPegファイル|*.jpg";
+			var result = saveFileDialog.ShowDialog();
+
+			switch (result)
+			{
+				case true:
+					switch (saveFileDialog.FilterIndex)
+					{
+						case 1:
+							Bitmap bmp = BitmapConverter.ToBitmap(BitmapSourceConverter.ToMat(Img));
+							bmp.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
+							break;
+						case 2:
+                            Bitmap png = BitmapConverter.ToBitmap(BitmapSourceConverter.ToMat(Img));
+							png.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                            break;
+						case 3:
+                            Bitmap jpg = BitmapConverter.ToBitmap(BitmapSourceConverter.ToMat(Img));
+							jpg.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            break;
+					}
+					
+					break;
+				case false:
+					break;
+			}
+
 		}
 
 		private void Reset()
@@ -68,7 +101,7 @@ namespace Im_Analyzer.ViewModels
 
 		public void OnNavigatedFrom(NavigationContext navigationContext)
 		{
-
+			// 特になし
 		}
 
 		public void OnNavigatedTo(NavigationContext navigationContext)

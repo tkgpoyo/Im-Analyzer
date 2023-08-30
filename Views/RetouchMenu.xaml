@@ -27,7 +27,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Button Content="トリミング" Command="{Binding NavigateCommand}" CommandParameter="TrimmingPage"  />
-            <Button Content="描画" Grid.Row="1" Command="{Binding NavigateCommand}" CommandParameter="DrawingPage" />
+            <Button Content="保存" Grid.Row="1" Command="{Binding SaveCommand}"/>
             <Button Content="元に戻す" Grid.Row="2" Command="{Binding ResetCommand}" />
             <Button Content="戻る" Grid.Row="3" Command="{Binding NavigateCommand}" CommandParameter="FunctionPage" />
         </Grid>

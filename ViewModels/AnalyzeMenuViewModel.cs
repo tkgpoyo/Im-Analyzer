@@ -33,7 +33,7 @@ namespace Im_Analyzer.ViewModels
 		{
 			var param = new NavigationParameters();
 			param.Add("Image", BitmapSourceConverter.ToMat(Img));
-			_regionManager.RequestNavigate("ContentRegion", navigatePath, param);
+			Models.Navigation.Navigation.NavigateToPath(_regionManager, "ContentRegion", navigatePath, param);
 		}
 		
 		public bool IsNavigationTarget(NavigationContext navigationContext)

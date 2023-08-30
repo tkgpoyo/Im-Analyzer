@@ -18,6 +18,13 @@ namespace Im_Analyzer.ViewModels
 
 		private Models.Analyzer.Labeling lb;
 
+		private BitmapSource _original_Img;
+		public BitmapSource Original_Img
+		{
+			get { return _original_Img; }
+			set { SetProperty(ref _original_Img, value); }
+		}
+		
 		private BitmapSource _img;
 		public BitmapSource Img
 		{
@@ -60,6 +67,7 @@ namespace Im_Analyzer.ViewModels
 		{
 			var sent_img = navigationContext.Parameters["Image"] as Mat;
 			Img = BitmapSourceConverter.ToBitmapSource(sent_img);
+			Original_Img = Img.Clone();
 
             lb = new Models.Analyzer.Labeling(BitmapSourceConverter.ToMat(Img));
         }
