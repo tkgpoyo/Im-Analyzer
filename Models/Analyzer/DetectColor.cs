@@ -90,7 +90,7 @@ namespace Im_Analyzer.Models.Analyzer
 
         }
 
-        public BitmapSource Filter(Vec3b col)
+        public BitmapSource Filter(Vec3b col, int delta_E)
         {
             Vec3b inverted_col = new Vec3b(Convert.ToByte(255 - col[0]), Convert.ToByte(255 - col[1]), Convert.ToByte(255 - col[2]));
 
@@ -123,7 +123,7 @@ namespace Im_Analyzer.Models.Analyzer
 
                         Delta_E = Math.Sqrt(Ld * Ld + ad * ad + bd * bd);
 
-                        if (Delta_E > 30.0)
+                        if (Delta_E > delta_E)
                             dst.Set(y, x, inverted_col);
 
                     }

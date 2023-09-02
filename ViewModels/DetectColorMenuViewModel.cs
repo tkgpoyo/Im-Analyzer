@@ -72,6 +72,13 @@ namespace Im_Analyzer.ViewModels
 			}
         }
 
+		private int _delta_E;
+		public int Delta_E
+		{
+			get { return _delta_E; }
+			set { SetProperty(ref _delta_E, value); }
+		}
+
         private OxyPlot.PlotModel _redModel;
 		public OxyPlot.PlotModel RedModel
 		{
@@ -107,7 +114,7 @@ namespace Im_Analyzer.ViewModels
 
 		private void Filter()
 		{
-			Img = dc.Filter(new Vec3b(Convert.ToByte(Value_Blue),Convert.ToByte(Value_Green),Convert.ToByte(Value_Red)));
+			Img = dc.Filter(new Vec3b(Convert.ToByte(Value_Blue),Convert.ToByte(Value_Green),Convert.ToByte(Value_Red)), Delta_E);
 		}
 
 		private void Navigate(string navigatePath)

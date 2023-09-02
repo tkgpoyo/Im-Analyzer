@@ -59,7 +59,7 @@ namespace Im_Analyzer.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Im_Analyzer;component/views/startuppage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Im_Analyzer;V1.0.0.0;component/views/startuppage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\StartUpPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
