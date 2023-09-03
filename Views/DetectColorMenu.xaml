@@ -33,7 +33,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Source="{Binding InitImg}" Margin="5,5,5,5"/>
+                <Image x:Name="init_img" Source="{Binding InitImg}" Margin="5"/>
                 <Image Source="{Binding Img}" Grid.Row="1" Margin="5,5,5,5"/>
             </Grid>
 
@@ -93,14 +93,16 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Slider x:Name="slider_DeltaE" Orientation="Vertical" Grid.RowSpan="2" Minimum="0" Maximum="30" SmallChange="1" LargeChange="1" Value="{Binding Delta_E}" />
-                <Label Grid.Column="1" Content="精度&#xa;(小さいほど厳密)"/>
-                <Label Grid.Column="1" Grid.Row="1" Content="{Binding Delta_E}"/>
+                <Slider x:Name="slider_DeltaE" Orientation="Vertical" Grid.RowSpan="3" Minimum="0" Maximum="30" SmallChange="1" LargeChange="1" Value="{Binding Delta_E}" />
+                <Label Grid.Column="1" Grid.Row="1" Content="精度&#xa;(小さいほど厳密)"/>
+                <Label Grid.Column="1" Grid.Row="2" Content="{Binding Delta_E}"/>
 
                 <Button Content="検出" Margin="5" Grid.Column="2" Command="{Binding FilterCommand}"/>
-                <Button Content="戻る" Margin="5" Grid.Column="2" Grid.Row="1" Command="{Binding NavigateCommand}" CommandParameter="AnalyzeMenu"/>
+                <Button Content="保存" Margin="5" Grid.Column="2" Grid.Row="1" Command="{Binding SaveCommand}"/>
+                <Button Content="戻る" Margin="5" Grid.Column="2" Grid.Row="2" Command="{Binding NavigateCommand}" CommandParameter="AnalyzeMenu"/>
             </Grid>
         </Grid>
 

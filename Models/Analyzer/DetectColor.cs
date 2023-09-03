@@ -3,13 +3,9 @@ using OxyPlot;
 using OxyPlot.Series;
 using OxyPlot.Axes;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 using OpenCvSharp.WpfExtensions;
-using System.Windows;
 
 namespace Im_Analyzer.Models.Analyzer
 {

@@ -4,20 +4,12 @@ using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 
 using Im_Analyzer.Views;
-using OpenCvSharp.Extensions;
-using System.Drawing.Imaging;
-using System.Windows.Media;
-using Microsoft.Win32;
-using Prism.Services.Dialogs;
-using System.Drawing;
 
 namespace Im_Analyzer.ViewModels
 {

@@ -1,7 +1,6 @@
 ﻿using OpenCvSharp;
 using OpenCvSharp.WpfExtensions;
 using System;
-using System.Security.RightsManagement;
 using System.Windows.Media.Imaging;
 
 namespace Im_Analyzer.Models

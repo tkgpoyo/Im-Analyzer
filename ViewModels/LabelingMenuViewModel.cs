@@ -3,12 +3,7 @@ using OpenCvSharp.WpfExtensions;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Media.Imaging;
-
-using Im_Analyzer.Models;
 
 namespace Im_Analyzer.ViewModels
 {
@@ -33,6 +28,7 @@ namespace Im_Analyzer.ViewModels
 		}
 
 		public DelegateCommand<string> LabelingCommand { get; private set; }
+		public DelegateCommand SaveCommand { get; private set; }
 
 		public DelegateCommand<string> NavigateCommand { get; private set; }
 		
@@ -40,6 +36,7 @@ namespace Im_Analyzer.ViewModels
 		{
 			_regionManager = regionManager;
 			LabelingCommand = new DelegateCommand<string>(Labeling);
+			SaveCommand = new DelegateCommand(Save);
 			NavigateCommand = new DelegateCommand<string>(Navigate);
 		}
 
@@ -48,7 +45,12 @@ namespace Im_Analyzer.ViewModels
 			Img = lb.LabelProcess(mode);
 		}
 
-		private void Navigate(string navigatePath)
+        private void Save()
+        {
+			Models.Save.Save.SaveImage(Img);
+        }
+
+        private void Navigate(string navigatePath)
 		{
 			Models.Navigation.Navigation.NavigateToPath(_regionManager, "ContentRegion", navigatePath);
 		}

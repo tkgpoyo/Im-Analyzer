@@ -3,9 +3,6 @@ using OpenCvSharp.WpfExtensions;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Media.Imaging;
 
 namespace Im_Analyzer.ViewModels

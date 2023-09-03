@@ -35,11 +35,13 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <Button Content="ラベルごとの色付け" Command="{Binding LabelingCommand}" CommandParameter="coloring"/>
             <Button Content="物体感知" Grid.Row="1" Command="{Binding LabelingCommand}" CommandParameter="identify"/>
-            <Button Content="戻る" Grid.Row="2" Command="{Binding NavigateCommand}" CommandParameter="AnalyzeMenu"/>
+            <Button Content="保存" Grid.Row="2" Command="{Binding SaveCommand}"/>
+            <Button Content="戻る" Grid.Row="3" Command="{Binding NavigateCommand}" CommandParameter="AnalyzeMenu"/>
         </Grid>
 
     </Grid>

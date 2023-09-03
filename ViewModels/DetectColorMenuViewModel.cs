@@ -2,14 +2,9 @@
 using Prism.Mvvm;
 using Prism.Regions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Im_Analyzer.Models;
 using System.Windows.Media.Imaging;
 using OpenCvSharp.WpfExtensions;
 using OpenCvSharp;
-using System.Windows;
 using System.Windows.Media;
 
 namespace Im_Analyzer.ViewModels
@@ -32,8 +27,8 @@ namespace Im_Analyzer.ViewModels
 			set { SetProperty(ref _img, value); }
 		}
 
-		private Brush _backColor;
-		public Brush BackColor
+		private System.Windows.Media.Brush _backColor;
+		public System.Windows.Media.Brush BackColor
 		{
 			get { return _backColor; }
 			set { SetProperty(ref _backColor, value); }
@@ -103,12 +98,15 @@ namespace Im_Analyzer.ViewModels
         private Models.Analyzer.DetectColor dc;
 
 		public DelegateCommand FilterCommand { get; private set; }
+		public DelegateCommand SaveCommand { get; private set; }
 		public DelegateCommand<string> NavigateCommand { get; private set; }
 		
 		public DetectColorMenuViewModel(IRegionManager regionManager)
 		{
 			_regionManager = regionManager;
+
 			FilterCommand = new DelegateCommand(Filter);
+			SaveCommand = new DelegateCommand(Save);
 			NavigateCommand = new DelegateCommand<string>(Navigate);
 		}
 
@@ -117,14 +115,19 @@ namespace Im_Analyzer.ViewModels
 			Img = dc.Filter(new Vec3b(Convert.ToByte(Value_Blue),Convert.ToByte(Value_Green),Convert.ToByte(Value_Red)), Delta_E);
 		}
 
-		private void Navigate(string navigatePath)
+        private void Save()
+        {
+			Models.Save.Save.SaveImage(Img);
+        }
+
+        private void Navigate(string navigatePath)
 		{
 			Models.Navigation.Navigation.NavigateToPath(_regionManager, "ContentRegion", navigatePath);
 		}
 
 		private void ChangeColor()
 		{
-			BackColor = new SolidColorBrush(Color.FromRgb(Convert.ToByte(Value_Red), Convert.ToByte(Value_Green), Convert.ToByte(Value_Blue)));
+			BackColor = new SolidColorBrush(System.Windows.Media.Color.FromRgb(Convert.ToByte(Value_Red), Convert.ToByte(Value_Green), Convert.ToByte(Value_Blue)));
 		}
 
 		public bool IsNavigationTarget(NavigationContext navigationContext)
