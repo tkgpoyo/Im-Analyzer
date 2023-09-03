@@ -107,7 +107,8 @@ namespace Im_Analyzer.ViewModels
 		public void OnNavigatedTo(NavigationContext navigationContext)
 		{
 			var sent_img = navigationContext.Parameters["Image"] as Mat;
-			Img = BitmapSourceConverter.ToBitmapSource(sent_img);
+			if (sent_img != null)
+				Img = BitmapSourceConverter.ToBitmapSource(sent_img);
 
 			if (original_bmp == null)
 				original_bmp = Img.Clone();

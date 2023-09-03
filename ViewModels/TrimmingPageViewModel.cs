@@ -94,19 +94,14 @@ namespace Im_Analyzer.ViewModels
 			set { SetProperty(ref _img, value); }
 		}
 
-		private DelegateCommand<object> _startPointingCommand;
 		public DelegateCommand<object> StartPointingCommand { get; private set; }
 
-		private DelegateCommand _endPointingCommand;
 		public DelegateCommand EndPointingCommand { get; private set; }
 
-		private DelegateCommand<object> _mouseOutOfCanvasCommand;
 		public DelegateCommand<object> MouseOutOfCanvasCommand { get; private set; }
 
-		private DelegateCommand<object[]> _trimmingCommand;
 		public DelegateCommand<object[]> TrimmingCommand { get; private set; }
 
-		private DelegateCommand _backPageCommand;
 		public DelegateCommand BackPageCommand { get; private set; }
 
 		public TrimmingPageViewModel(IRegionManager regionManager)
@@ -222,7 +217,7 @@ namespace Im_Analyzer.ViewModels
 
         private void BackPage()
 		{
-			_regionManager.RequestNavigate("ContentRegion", nameof(RetouchMenu));
+			Models.Navigation.Navigation.NavigateToPath(_regionManager, "ContentRegion", nameof(RetouchMenu));
 		}
 		
 		public bool IsNavigationTarget(NavigationContext navigationContext)
