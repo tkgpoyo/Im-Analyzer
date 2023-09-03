@@ -6,6 +6,7 @@ using System.Windows.Media.Imaging;
 using OpenCvSharp.WpfExtensions;
 using OpenCvSharp;
 using System.Windows.Media;
+using System.Windows.Input;
 
 namespace Im_Analyzer.ViewModels
 {
@@ -40,8 +41,8 @@ namespace Im_Analyzer.ViewModels
 			get { return _value_Red; }
 			set
 			{
-				ChangeColor();
 				SetProperty(ref _value_Red, value);
+				ChangeColor();
 			}
 		}
 
@@ -51,8 +52,8 @@ namespace Im_Analyzer.ViewModels
             get { return _value_Green; }
             set
 			{
-				ChangeColor();
 				SetProperty(ref _value_Green, value);
+				ChangeColor();
 			}
         }
 
@@ -62,8 +63,8 @@ namespace Im_Analyzer.ViewModels
             get { return _value_Blue; }
             set
 			{
-				ChangeColor();
 				SetProperty(ref _value_Blue, value);
+				ChangeColor();
 			}
         }
 
@@ -97,6 +98,8 @@ namespace Im_Analyzer.ViewModels
 
         private Models.Analyzer.DetectColor dc;
 
+		public DelegateCommand<object> GetColorCommand { get; private set; }
+
 		public DelegateCommand FilterCommand { get; private set; }
 		public DelegateCommand SaveCommand { get; private set; }
 		public DelegateCommand<string> NavigateCommand { get; private set; }
@@ -105,9 +108,36 @@ namespace Im_Analyzer.ViewModels
 		{
 			_regionManager = regionManager;
 
+			GetColorCommand = new DelegateCommand<object>(GetColor);
 			FilterCommand = new DelegateCommand(Filter);
 			SaveCommand = new DelegateCommand(Save);
 			NavigateCommand = new DelegateCommand<string>(Navigate);
+		}
+
+		private void GetColor(object image_element)
+		{
+			var element = (System.Windows.IInputElement)image_element;
+			var pos = Mouse.GetPosition(element);
+
+			var image = (System.Windows.Controls.Image)image_element;
+
+			int x = (int)(Img.PixelWidth * pos.X / image.ActualWidth);
+			int y = (int)(Img.PixelHeight * pos.Y / image.ActualHeight);
+
+			if (x == Img.PixelWidth)
+				x--;
+			if (y == Img.PixelHeight)
+				y--;
+
+			using (Mat tmp = BitmapSourceConverter.ToMat(InitImg))
+			{
+				Vec3b pixel = tmp.At<Vec3b>(y, x);
+
+				Value_Red = pixel[2];
+				Value_Green = pixel[1];
+				Value_Blue = pixel[0];
+			}
+
 		}
 
 		private void Filter()

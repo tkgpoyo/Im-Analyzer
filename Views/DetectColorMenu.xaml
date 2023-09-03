@@ -1,6 +1,7 @@
 ﻿<UserControl x:Class="Im_Analyzer.Views.DetectColorMenu"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
 			 xmlns:prism="http://prismlibrary.com/"
              xmlns:oxy="http://oxyplot.org/wpf"
 			 prism:ViewModelLocator.AutoWireViewModel="True">
@@ -33,7 +34,13 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image x:Name="init_img" Source="{Binding InitImg}" Margin="5"/>
+                <Image x:Name="init_img" Source="{Binding InitImg}" Margin="5">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction Command="{Binding GetColorCommand}" CommandParameter="{Binding ElementName=init_img}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
                 <Image Source="{Binding Img}" Grid.Row="1" Margin="5,5,5,5"/>
             </Grid>
 
